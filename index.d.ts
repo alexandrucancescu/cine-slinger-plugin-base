@@ -18,19 +18,28 @@ export interface MovieDetails {
 	year: number;
 }
 
-export interface MovieTorrent {
+export interface MovieTorrentInfo {
 	id: string;
 	size: number;
 	resolution?: Resolution;
 	torrentName: string;
 	peers: number;
 	year: number;
+	_props: {
+		[key: string]: any
+	}
 }
 
-export interface Torrent {
-	magnet?: string;
-	file?: string;
+export interface MagnetTorrent {
+	magnet: string;
 }
+
+export interface FileTorrent {
+	file: Buffer;
+}
+
+export type Torrent = FileTorrent | MagnetTorrent;
+
 
 export type ProviderConfig = {
 	[key: string]: number | string | boolean;
@@ -45,7 +54,7 @@ export interface ProviderInfo {
 export abstract class TorrentProvider {
 	public static requiredProperties: TorrentProviderConfigInfo;
 
-	public abstract searchMovie(movie: MovieDetails): Promise<MovieTorrent[]>;
-	public abstract getTorrentFor(id: string): Promise<Torrent>;
+	public abstract searchMovie(movie: MovieDetails): Promise<MovieTorrentInfo[]>;
+	public abstract getTorrentFor(movie: MovieTorrentInfo): Promise<Torrent>;
 	public abstract init(config: ProviderConfig): Promise<void>;
 }
