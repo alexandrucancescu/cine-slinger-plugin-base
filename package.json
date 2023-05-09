@@ -1,5 +1,5 @@
 {
-  "name": "@nas-movie-manager/provider-types",
+  "name": "nas-movie-manager-provider-types",
   "version": "0.0.1-Alpha",
   "description": "Types for developing a torrent provider for nas-movie-manager",
   "repository": "alexandrucancescu/movie-manager-provider-types",
