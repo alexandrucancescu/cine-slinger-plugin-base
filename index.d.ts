@@ -51,8 +51,8 @@ export interface ProviderInfo {
 	description?: string;
 }
 
-export abstract class TorrentProvider {
-	public abstract searchMovie(movie: MovieDetails): Promise<MovieTorrentInfo[]>;
-	public abstract getTorrentFor(movie: MovieTorrentInfo): Promise<Torrent>;
-	public abstract init(config: ProviderConfig): Promise<void>;
+export interface TorrentProvider {
+	searchMovie(movie: MovieDetails): Promise<MovieTorrentInfo[]>;
+	getTorrentFor(movie: MovieTorrentInfo): Promise<Torrent>;
+	init(config: ProviderConfig): Promise<void>;
 }
