@@ -6,6 +6,7 @@
   "homepage": "https://github.com/alexandrucancescu/movie-manager-provider-types",
   "types": "index.d.ts",
   "typings": "index.d.ts",
+  "private": false,
   "main": "",
   "author": "Alexandru Cancescu",
   "license": "MIT"
