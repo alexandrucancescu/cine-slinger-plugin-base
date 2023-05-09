@@ -1,14 +1,4 @@
 
-export type TorrentProviderConfigInfo = {
-	[key: string]: {
-		description?: string;
-		friendlyName: string;
-		type: "number" | "string" | "boolean" | "password";
-		default?: number | string | boolean;
-		required?: boolean
-	}
-}
-
 export type Resolution = "uhd" | "fhd" | "hd" | "low";
 
 export interface MovieDetails {
@@ -45,8 +35,18 @@ export type ProviderConfig = {
 	[key: string]: number | string | boolean;
 }
 
+export type TorrentProviderConfigInfo = {
+	[key: string]: {
+		description?: string;
+		friendlyName: string;
+		type: "number" | "string" | "boolean" | "password";
+		default?: number | string | boolean;
+		required?: boolean
+	}
+}
+
 export interface ProviderInfo {
-	config: TorrentProviderConfigInfo;
+	configInfo: TorrentProviderConfigInfo;
 	name: string;
 	description?: string;
 }
