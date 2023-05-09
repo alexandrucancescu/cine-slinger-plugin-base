@@ -1,0 +1,9 @@
+{
+  "name": "nas-movie-manager-torrent-provider-types",
+  "version": "0.0.1-Alpha",
+  "description": "Types for developing a torrent provider for nas-movie-manager",
+  "types": "index.d.ts",
+  "typings": "index.d.ts",
+  "author": "Alexandru Cancescu",
+  "license": "MIT"
+}
