@@ -1,6 +1,6 @@
 {
   "name": "nas-movie-manager-provider-types",
-  "version": "0.0.6-Alpha",
+  "version": "0.0.6-alpha",
   "description": "Types for developing a torrent provider for nas-movie-manager",
   "repository": "alexandrucancescu/movie-manager-provider-types",
   "homepage": "https://github.com/alexandrucancescu/movie-manager-provider-types",

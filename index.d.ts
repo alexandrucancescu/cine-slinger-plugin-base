@@ -58,8 +58,7 @@ export interface ProviderInfo {
 }
 
 export interface TorrentProvider {
-	new (config: ProviderConfig, log: Logger): TorrentProvider;
 	searchMovie(movie: MovieDetails): Promise<MovieTorrentInfo[]>;
 	getTorrentFor(movie: MovieTorrentInfo): Promise<Torrent>;
-	init(config: ProviderConfig): Promise<void>;
+	init(config: ProviderConfig, log: Logger): Promise<void>;
 }
