@@ -38,7 +38,7 @@ interface Logger {
 }
 
 export type ProviderConfig = {
-	[key: string]: number | string | boolean;
+	[key: string]: number | string | boolean | undefined;
 }
 
 export type TorrentProviderConfigInfo = {
@@ -61,4 +61,5 @@ export interface TorrentProvider {
 	searchMovie(movie: MovieDetails): Promise<MovieTorrentInfo[]>;
 	getTorrentFor(movie: MovieTorrentInfo): Promise<Torrent>;
 	init(config: ProviderConfig, log: Logger): Promise<void>;
+	clearData(): Promise<void>;
 }
