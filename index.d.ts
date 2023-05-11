@@ -30,6 +30,12 @@ export interface FileTorrent {
 
 export type Torrent = FileTorrent | MagnetTorrent;
 
+interface Logger {
+	debug(m: string): void;
+	info(m: string): void;
+	warn(m: string): void;
+	error(m: string): void;
+}
 
 export type ProviderConfig = {
 	[key: string]: number | string | boolean;
@@ -52,6 +58,7 @@ export interface ProviderInfo {
 }
 
 export interface TorrentProvider {
+	new (config: ProviderConfig, log: Logger): TorrentProvider;
 	searchMovie(movie: MovieDetails): Promise<MovieTorrentInfo[]>;
 	getTorrentFor(movie: MovieTorrentInfo): Promise<Torrent>;
 	init(config: ProviderConfig): Promise<void>;
