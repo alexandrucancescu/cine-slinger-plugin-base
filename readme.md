@@ -1,1 +1,3 @@
-## Types for developing a torrent provider for nas-movie-manager 
+### Plugin base with types and helpers for developing plugins for cine-slinger
+
+Written in typescript
