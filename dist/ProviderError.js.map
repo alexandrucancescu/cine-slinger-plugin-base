@@ -1,0 +1,1 @@
+{"version":3,"file":"ProviderError.js","sourceRoot":"","sources":["../src/ProviderError.ts"],"names":[],"mappings":";;AAMA,MAAqB,aAAc,SAAQ,KAAK;IAC7B,cAAc,CAAS;IACvB,eAAe,GAAG,IAAI,CAAC;IAEvC,YAAY,EAAC,OAAO,EAAE,cAAc,EAAsB;QACvD,KAAK,CAAC,OAAO,CAAC,CAAC;QACf,IAAI,CAAC,IAAI,GAAG,eAAe,CAAC;QAC5B,IAAI,CAAC,cAAc,GAAG,cAAc,CAAC;IACxC,CAAC;CACH;AATD,gCASC"}
