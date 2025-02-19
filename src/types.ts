@@ -1,7 +1,7 @@
 export type Resolution = "uhd" | "fhd" | "hd" | "sd";
 
 export interface MovieSearchDetails {
-   imdbId: number;
+   imdbId: string;
    title: string;
    resolution?: Resolution;
    year: number;
