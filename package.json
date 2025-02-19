@@ -1,6 +1,6 @@
 {
   "name": "cine-slinger-plugin-base",
-  "version": "0.1.0-alpha",
+  "version": "0.1.1-alpha",
   "description": "Types for developing a torrent provider for nas-movie-manager",
   "repository": "alexandrucancescu/cine-slinger-plugin-base",
   "homepage": "https://github.com/alexandrucancescu/cine-slinger-plugin-base",
