@@ -1,6 +1,6 @@
 {
   "name": "cine-slinger-plugin-base",
-  "version": "0.1.1-alpha",
+  "version": "0.1.3-alpha",
   "description": "Types for developing a torrent provider for nas-movie-manager",
   "repository": "alexandrucancescu/cine-slinger-plugin-base",
   "homepage": "https://github.com/alexandrucancescu/cine-slinger-plugin-base",
@@ -10,8 +10,12 @@
   "main": "dist/index.js",
   "author": "Alexandru Cancescu",
   "license": "MIT",
-  "files": ["dist/**", "readme.md"],
+  "files": [
+    "dist/**",
+    "readme.md"
+  ],
   "devDependencies": {
-    "@types/node": "^20.1.1"
+    "@types/node": "^20.1.1",
+    "prettier": "^3.6.2"
   }
 }
