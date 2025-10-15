@@ -9,7 +9,7 @@ export type MovieSearchDetails = {
 
 export type TvSeriesSearchInput = {
 	imdbId?: string
-	title?: string
+	title: string
 	resolution?: Resolution
 	season?: number
 	episode?: number
