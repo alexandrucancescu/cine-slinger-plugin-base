@@ -1,13 +1,33 @@
 export type Resolution = 'bd' | 'uhd' | 'fhd' | 'hd' | 'sd'
 
-export interface MovieSearchDetails {
+export type MovieSearchDetails = {
 	imdbId: string
 	title: string
 	resolution?: Resolution
 	year: number
 }
 
-export interface MovieTorrentInfo {
+export type TvSeriesSearchInput = {
+	imdbId?: string
+	title?: string
+	resolution?: Resolution
+	season?: number
+	episode?: number
+}
+
+export type TvSeriesTorrentInfo = {
+	id: string
+	torrentName: string
+	size: number
+	seeds: number
+	info: TitleParseInfo
+	resolution: Resolution
+	props?: {
+		[key: string]: unknown
+	}
+}
+
+export type MovieTorrentInfo = {
 	id: string
 	torrentName: string
 	size: number
@@ -15,23 +35,23 @@ export interface MovieTorrentInfo {
 	info: TitleParseInfo
 	resolution: Resolution
 	_props?: {
-		[key: string]: any
+		[key: string]: unknown
 	}
 }
 
-export interface MagnetTorrent {
+export type MagnetTorrent = {
 	isMagnet: true
 	magnet: string
 }
 
-export interface FileTorrent {
+export type FileTorrent = {
 	isMagnet: false
 	file: Buffer
 }
 
 export type Torrent = FileTorrent | MagnetTorrent
 
-export interface Logger {
+export type Logger = {
 	debug(m: string, ...args: any): void
 	info(m: string, ...args: any): void
 	warn(m: string, ...args: any): void
@@ -68,6 +88,9 @@ export type GetTorrentProps = {
 
 export interface TorrentProvider {
 	searchMovie(movie: MovieSearchDetails): Promise<MovieTorrentInfo[]>
+	searchTvSeries(
+		seriesSearchInput: TvSeriesSearchInput
+	): Promise<TvSeriesTorrentInfo[]>
 	getTorrentFor(movie: GetTorrentProps): Promise<Torrent>
 	init(config: ProviderConfig, log: Logger): Promise<void>
 	clearData(): Promise<void>
